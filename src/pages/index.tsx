@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
       <Container>
-        <h1>Welcome to your Recipe Book</h1>
+        <h1 >Welcome to your Recipe Book</h1>
         <h5>Here you can store recipes, search through your recipes, and create a meal plan/shopping list</h5>
       </Container>
       </main>
