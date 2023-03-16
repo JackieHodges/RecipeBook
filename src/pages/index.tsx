@@ -2,8 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import BasicCard from '../components/Card'
+import BasicCard from '../components/BasicCard'
 import { Container } from 'react-bootstrap'
+import BasicListGroup from '@/components/BasicListGroup'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,10 +18,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <Container>
-        <h1 >Welcome to your Recipe Book</h1>
-        <h5>Here you can store recipes, search through your recipes, and create a meal plan/shopping list</h5>
-      </Container>
+        <Container>
+          <h1 >Welcome to your Recipe Book</h1>
+          <h5>Here you can store recipes, search through your recipes, and create a meal plan/shopping list</h5>
+          <Container className='flex flex-row justify-center gap-x-4'>
+            <BasicCard>
+              <h1>test</h1>
+            </BasicCard>
+            <BasicListGroup options={["hi", "plz"]} />
+            <BasicCard>
+              <h1>test</h1>
+            </BasicCard>
+          </Container>
+        </Container>
       </main>
     </>
   )
